@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             panel1 = new Panel();
-            button2 = new Button();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
             button1 = new Button();
             pictureBox2 = new PictureBox();
             btnProductos = new Button();
@@ -46,42 +46,44 @@
             // panel1
             // 
             panel1.BackColor = Color.Moccasin;
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(260, 451);
             panel1.TabIndex = 1;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Moccasin;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(0, 368);
-            button2.Name = "button2";
-            button2.Size = new Size(123, 83);
-            button2.TabIndex = 3;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(260, 200);
+            pictureBox1.Size = new Size(260, 262);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ButtonHighlight;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatAppearance.BorderColor = Color.Black;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(481, 203);
+            button2.Name = "button2";
+            button2.Size = new Size(53, 49);
+            button2.TabIndex = 3;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom;
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatAppearance.BorderColor = Color.Black;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(266, 402);
+            button1.Location = new Point(481, 114);
             button1.Name = "button1";
             button1.Size = new Size(53, 49);
             button1.TabIndex = 3;
@@ -101,47 +103,60 @@
             // 
             // btnProductos
             // 
-            btnProductos.Location = new Point(266, 124);
+            btnProductos.BackColor = Color.Maroon;
+            btnProductos.FlatAppearance.BorderColor = Color.Black;
+            btnProductos.FlatStyle = FlatStyle.Flat;
+            btnProductos.Location = new Point(266, 114);
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(142, 30);
             btnProductos.TabIndex = 4;
             btnProductos.Text = "Gestion De Productos";
-            btnProductos.UseVisualStyleBackColor = true;
+            btnProductos.UseVisualStyleBackColor = false;
             // 
             // btnFacturacion
             // 
-            btnFacturacion.Location = new Point(266, 160);
+            btnFacturacion.BackColor = Color.Maroon;
+            btnFacturacion.FlatAppearance.BorderColor = Color.Black;
+            btnFacturacion.FlatStyle = FlatStyle.Flat;
+            btnFacturacion.Location = new Point(266, 150);
             btnFacturacion.Name = "btnFacturacion";
             btnFacturacion.Size = new Size(142, 30);
             btnFacturacion.TabIndex = 5;
             btnFacturacion.Text = "Emitir Factura";
-            btnFacturacion.UseVisualStyleBackColor = true;
+            btnFacturacion.UseVisualStyleBackColor = false;
             btnFacturacion.Click += button4_Click;
             // 
             // btnConsultas
             // 
-            btnConsultas.Location = new Point(266, 196);
+            btnConsultas.BackColor = Color.Maroon;
+            btnConsultas.FlatAppearance.BorderColor = Color.Black;
+            btnConsultas.FlatStyle = FlatStyle.Flat;
+            btnConsultas.Location = new Point(266, 186);
             btnConsultas.Name = "btnConsultas";
             btnConsultas.Size = new Size(142, 30);
             btnConsultas.TabIndex = 6;
             btnConsultas.Text = "Consultar Facturas";
-            btnConsultas.UseVisualStyleBackColor = true;
+            btnConsultas.UseVisualStyleBackColor = false;
             // 
             // btnReportes
             // 
-            btnReportes.Location = new Point(266, 232);
+            btnReportes.BackColor = Color.Maroon;
+            btnReportes.FlatAppearance.BorderColor = Color.Black;
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.Location = new Point(266, 222);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(142, 30);
             btnReportes.TabIndex = 7;
             btnReportes.Text = "Informe de Ventas";
-            btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.UseVisualStyleBackColor = false;
             // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(539, 451);
+            ClientSize = new Size(535, 264);
+            Controls.Add(button2);
             Controls.Add(btnReportes);
             Controls.Add(btnConsultas);
             Controls.Add(btnFacturacion);
