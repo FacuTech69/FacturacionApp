@@ -11,7 +11,7 @@ namespace FacturacionApp.Entidades
     public class Producto
     {
         //Clave primaria que va incrementandose
-        public int id { get; set; }
+        public int Id { get; set; }
 
         // Codigo comercial Ingresado por el usuario para identificar el producto
         public string Codigo { get; set; } = string.Empty;
