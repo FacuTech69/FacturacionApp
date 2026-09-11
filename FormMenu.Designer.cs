@@ -69,7 +69,7 @@
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.FlatAppearance.BorderColor = Color.Black;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(481, 203);
+            button2.Location = new Point(491, 222);
             button2.Name = "button2";
             button2.Size = new Size(53, 49);
             button2.TabIndex = 3;
@@ -83,7 +83,7 @@
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatAppearance.BorderColor = Color.Black;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(481, 114);
+            button1.Location = new Point(491, 177);
             button1.Name = "button1";
             button1.Size = new Size(53, 49);
             button1.TabIndex = 3;
@@ -155,7 +155,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(535, 264);
+            ClientSize = new Size(546, 272);
             Controls.Add(button2);
             Controls.Add(btnReportes);
             Controls.Add(btnConsultas);
