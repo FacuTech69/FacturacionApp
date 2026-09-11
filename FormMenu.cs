@@ -1,3 +1,5 @@
+using FacturacionApp.Vistas_UI;
+
 namespace FacturacionApp
 {
     public partial class FormMenu : Form
@@ -25,7 +27,15 @@ namespace FacturacionApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Instanciamos el formulario de maestro-detalle
+            FormFacturacion formFacturacion = new FormFacturacion();
+            // Lo abrimos de forma modal
+            formFacturacion.ShowDialog();
         }
     }
 }

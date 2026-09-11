@@ -34,6 +34,10 @@
             pictureBox1 = new PictureBox();
             button1 = new Button();
             pictureBox2 = new PictureBox();
+            btnProductos = new Button();
+            btnFacturacion = new Button();
+            btnConsultas = new Button();
+            btnReportes = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -77,9 +81,9 @@
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(266, 406);
+            button1.Location = new Point(266, 402);
             button1.Name = "button1";
-            button1.Size = new Size(50, 45);
+            button1.Size = new Size(53, 49);
             button1.TabIndex = 3;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
@@ -95,12 +99,53 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
+            // btnProductos
+            // 
+            btnProductos.Location = new Point(266, 124);
+            btnProductos.Name = "btnProductos";
+            btnProductos.Size = new Size(142, 30);
+            btnProductos.TabIndex = 4;
+            btnProductos.Text = "Gestion De Productos";
+            btnProductos.UseVisualStyleBackColor = true;
+            // 
+            // btnFacturacion
+            // 
+            btnFacturacion.Location = new Point(266, 160);
+            btnFacturacion.Name = "btnFacturacion";
+            btnFacturacion.Size = new Size(142, 30);
+            btnFacturacion.TabIndex = 5;
+            btnFacturacion.Text = "Emitir Factura";
+            btnFacturacion.UseVisualStyleBackColor = true;
+            btnFacturacion.Click += button4_Click;
+            // 
+            // btnConsultas
+            // 
+            btnConsultas.Location = new Point(266, 196);
+            btnConsultas.Name = "btnConsultas";
+            btnConsultas.Size = new Size(142, 30);
+            btnConsultas.TabIndex = 6;
+            btnConsultas.Text = "Consultar Facturas";
+            btnConsultas.UseVisualStyleBackColor = true;
+            // 
+            // btnReportes
+            // 
+            btnReportes.Location = new Point(266, 232);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(142, 30);
+            btnReportes.TabIndex = 7;
+            btnReportes.Text = "Informe de Ventas";
+            btnReportes.UseVisualStyleBackColor = true;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(539, 451);
+            Controls.Add(btnReportes);
+            Controls.Add(btnConsultas);
+            Controls.Add(btnFacturacion);
+            Controls.Add(btnProductos);
             Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(panel1);
@@ -118,5 +163,9 @@
         private PictureBox pictureBox2;
         private Button button1;
         private Button button2;
+        private Button btnProductos;
+        private Button btnFacturacion;
+        private Button btnConsultas;
+        private Button btnReportes;
     }
 }
