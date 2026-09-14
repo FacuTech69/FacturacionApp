@@ -112,6 +112,7 @@
             btnProductos.TabIndex = 4;
             btnProductos.Text = "Gestion De Productos";
             btnProductos.UseVisualStyleBackColor = false;
+            btnProductos.Click += btnProductos_Click;
             // 
             // btnFacturacion
             // 
@@ -137,6 +138,7 @@
             btnConsultas.TabIndex = 6;
             btnConsultas.Text = "Consultar Facturas";
             btnConsultas.UseVisualStyleBackColor = false;
+            btnConsultas.Click += btnConsultas_Click;
             // 
             // btnReportes
             // 
@@ -149,6 +151,7 @@
             btnReportes.TabIndex = 7;
             btnReportes.Text = "Informe de Ventas";
             btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // FormMenu
             // 
