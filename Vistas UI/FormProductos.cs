@@ -39,6 +39,7 @@ namespace FacturacionApp.Vistas_UI
         {
             // Llamamos al método que consulta la base y llena la grilla
             CargarGrilla();
+            LimpiarCampos();
         }
 
         // Método auxiliar para refrescar los datos de la grilla desde SQL
@@ -172,5 +173,11 @@ namespace FacturacionApp.Vistas_UI
                 }
             }
         }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
     }
 }
+

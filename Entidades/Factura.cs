@@ -33,5 +33,11 @@ namespace FacturacionApp.Entidades
         //Propiedad opcional para manejar el estado de anulacion 
 
         public bool Anulada { get; set; }
+
+        // Agregamos este método para que compute la suma de los subtotales del carrito
+        public void CalcularTotal()
+        {
+            Total = Detalles.Sum(d => d.Subtotal);
+        }
     }
 }

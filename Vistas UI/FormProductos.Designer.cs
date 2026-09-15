@@ -69,14 +69,14 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(132, 114);
+            txtNombre.Location = new Point(132, 61);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(100, 23);
             txtNombre.TabIndex = 2;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(132, 56);
+            txtPrecio.Location = new Point(132, 114);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(100, 23);
             txtPrecio.TabIndex = 3;
@@ -117,6 +117,7 @@
             btnLimpiar.TabIndex = 7;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click_1;
             // 
             // btnGuardar
             // 

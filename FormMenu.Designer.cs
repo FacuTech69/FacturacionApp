@@ -106,6 +106,7 @@
             btnProductos.BackColor = Color.Maroon;
             btnProductos.FlatAppearance.BorderColor = Color.Black;
             btnProductos.FlatStyle = FlatStyle.Flat;
+            btnProductos.ForeColor = SystemColors.ControlLightLight;
             btnProductos.Location = new Point(266, 114);
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(142, 30);
@@ -119,6 +120,7 @@
             btnFacturacion.BackColor = Color.Maroon;
             btnFacturacion.FlatAppearance.BorderColor = Color.Black;
             btnFacturacion.FlatStyle = FlatStyle.Flat;
+            btnFacturacion.ForeColor = SystemColors.ControlLightLight;
             btnFacturacion.Location = new Point(266, 150);
             btnFacturacion.Name = "btnFacturacion";
             btnFacturacion.Size = new Size(142, 30);
@@ -132,6 +134,7 @@
             btnConsultas.BackColor = Color.Maroon;
             btnConsultas.FlatAppearance.BorderColor = Color.Black;
             btnConsultas.FlatStyle = FlatStyle.Flat;
+            btnConsultas.ForeColor = SystemColors.ControlLightLight;
             btnConsultas.Location = new Point(266, 186);
             btnConsultas.Name = "btnConsultas";
             btnConsultas.Size = new Size(142, 30);
@@ -145,6 +148,7 @@
             btnReportes.BackColor = Color.Maroon;
             btnReportes.FlatAppearance.BorderColor = Color.Black;
             btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.ForeColor = SystemColors.ControlLightLight;
             btnReportes.Location = new Point(266, 222);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(142, 30);

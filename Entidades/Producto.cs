@@ -26,7 +26,7 @@ namespace FacturacionApp.Entidades
         public decimal Precio { get; set; } 
 
         //Indica si el producto esta disponible para ser vendible 
-        public bool Activo { get; set; }
+        public bool Activo { get; set; } = true; // Default en true
 
 
         //Sobrescribimos ToString para que al mostrar el producto en combos visuales se lea el Nombre y Precio
