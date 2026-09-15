@@ -95,9 +95,9 @@ namespace FacturacionApp.Datos
             }
 
         }
-    
 
-    // Método para listar facturas con filtros de fecha y cliente
+
+        // Método para listar facturas con filtros de fecha y cliente
         public List<Factura> ObtenerFacturas(DateTime desde, DateTime hasta, string clienteFiltro = "")
         {
             // Lista para almacenar los resultados
@@ -258,6 +258,55 @@ namespace FacturacionApp.Datos
             }
             // Devolvemos el reporte terminado
             return lista;
+        }
+        // DTO (Data Transfer Object) para estructurar la grilla de ventas por producto
+        public class ReporteProductoDto
+        {
+            public string Producto { get; set; }
+            public int CantidadVendida { get; set; }
+            public decimal TotalRecaudado { get; set; }
+        }
+
+        // Agregar este método dentro de la clase FacturaDao:
+        public List<ReporteProductoDto> ObtenerVentasPorProducto(DateTime desde, DateTime hasta)
+        {
+            List<ReporteProductoDto> lista = new List<ReporteProductoDto>();
+
+            string query = @"
+        SELECT 
+            p.Nombre AS Producto,
+            SUM(fd.Cantidad) AS CantidadVendida,
+            SUM(fd.Cantidad * fd.PrecioUnitario) AS TotalRecaudado
+        FROM Facturas f
+        INNER JOIN FacturaDetalle fd ON f.Id = fd.FacturaId
+        INNER JOIN Productos p ON fd.ProductoId = p.Id
+        WHERE f.Fecha >= @Desde AND f.Fecha <= @Hasta
+        GROUP BY p.Nombre
+        ORDER BY TotalRecaudado DESC";
+
+            using (SqlConnection conexion = _conexionDb.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@Desde", desde.Date);
+                cmd.Parameters.AddWithValue("@Hasta", hasta.Date.AddDays(1).AddTicks(-1));
+
+                conexion.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new ReporteProductoDto
+                        {
+                            Producto = reader["Producto"].ToString(),
+                            CantidadVendida = Convert.ToInt32(reader["CantidadVendida"]),
+                            TotalRecaudado = Convert.ToDecimal(reader["TotalRecaudado"])
+                        });
+                    }
+                }
+            }
+
+            return lista;
+
         }
     }
 }

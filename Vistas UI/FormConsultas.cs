@@ -24,6 +24,13 @@ namespace FacturacionApp.Vistas_UI
         private void FormConsultas_Load(object sender, EventArgs e)
         {
             CargarFacturas();
+            // Bloquea la edición manual de celdas
+            dgvFacturas.ReadOnly = true;
+            dgvDetalle.ReadOnly = true;
+
+            // Evita que aparezca la fila vacía al final para agregar filas manualmente
+            dgvFacturas.AllowUserToAddRows = false;
+            dgvDetalle.AllowUserToAddRows = false;
         }
 
         private void CargarFacturas(string busqueda = "")
